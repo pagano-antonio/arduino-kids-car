@@ -37,10 +37,7 @@ void loop() {
   // Read device output if available.
   if (mySerialBlueTooth.available()) {
     Serial.println("In Output from BT");
-    /*
-    while (mySerialBlueTooth.available()) {  // While there is more to be read, keep reading.
-      command += (char)mySerialBlueTooth.read();
-    }*/
+
     command = mySerialBlueTooth.read();  // legge 1 carattere
     Serial.println(command);
 
